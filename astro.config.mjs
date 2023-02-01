@@ -7,6 +7,11 @@ import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
+import vercel from "@astrojs/vercel/serverless";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), tailwind()]
+  integrations: [vue(), tailwind()],
+  output: "server",
+  adapter: vercel()
 });
